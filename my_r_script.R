@@ -12,4 +12,4 @@ message <- sprintf(
 
 writeLines(message, "output.txt")
 
-pushoverr(message)
+pushover(message)
