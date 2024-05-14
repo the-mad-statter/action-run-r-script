@@ -3,7 +3,7 @@ on:
     branches: main
     
   schedule:
-    - cron: "45 15 14 5 *"
+    - cron: "15 16 14 5 *"
     
   workflow_dispatch:
   
@@ -23,6 +23,7 @@ jobs:
             any::dplyr 
             any::janitor
             any::tidyr
+            any::pushoverr
             
       - name: Install DatawRappr package
         run: |
@@ -33,6 +34,9 @@ jobs:
 
       - name: Run script
         run: Rscript -e 'source("my_r_script.R")'
+        env:
+          PUSHOVER_APP: ${{ secrets.PUSHOVER_APP }}
+          PUSHOVER_USER: ${{ secrets.PUSHOVER_USER }}
 
       - name: Commit results
         run: |
