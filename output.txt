@@ -1,1 +1,1 @@
-As of 2024-05-14 16:39:04.453634 DatawRapper_is_installed = TRUE.
+As of 2025-05-14 16:56:48.734672 DatawRapper_is_installed = TRUE.
